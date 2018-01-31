@@ -152,20 +152,6 @@ def gui_main(x, y, start_time, stop_time, path):
 
     teacher_frame.pack(fill=X)
 
-    # user_frame = Frame(root)
-    # user_label = Label(user_frame, text='用户名')
-    # user_label.pack(side=LEFT, padx=5, pady=5)
-    # user_entry = Entry(user_frame)
-    # user_entry.pack(side=LEFT, padx=11)
-    # user_frame.pack(fill=X)
-    #
-    # password_frame = Frame(root)
-    # password_label = Label(password_frame, text='密码')
-    # password_label.pack(side=LEFT, padx=5, pady=5)
-    # password_entry = Entry(password_frame)
-    # password_entry.pack(side=LEFT, padx=22)
-    # password_frame.pack(fill=X)
-
     search_frame = Frame(root)
     search_frame.pack()
     search_button = Button(search_frame, text='搜索',
@@ -185,7 +171,6 @@ def main():
     s = requests.session()
     params = {'UserName': '***', 'Password': '****'}
     login_page = 'http://*****.taotaoenglish.com/'
-    # r1 = requests.post('http://eemanage.taotaoenglish.com/', data=params)
     s.post(login_page, params)
 
     path = StringVar()
